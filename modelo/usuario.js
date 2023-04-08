@@ -16,7 +16,9 @@ const Usuario = banco.define("usuario", {
     email:{
         type: Sequelize.STRING,
         allowNull: false,
-        primaryKey: false
+        primaryKey: false,
+        unique: true
+
     },
     senha:{
         type: Sequelize.STRING,
