@@ -1,8 +1,8 @@
 const Sequelize = require("sequelize");
 const banco = require("../db.js");
-const Funcionario = require("./funcionario");
+const Equipamento = require("./equipamento");
 
-const Departamento = banco.define("departamento", {
+const Comodo = banco.define("comodo", {
     id:{
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -15,18 +15,11 @@ const Departamento = banco.define("departamento", {
         primaryKey: false,
         unique: true
     },
-    sala:{
-        type: Sequelize.STRING,
-        allowNull: false,
-        primaryKey: false,
-        unique: true
-
-    },
-    telefone:{
-        type: Sequelize.STRING,
+    area:{
+        type: Sequelize.INTEGER,
         allowNull: false,
         primaryKey: false
     }
 });
 
-module.exports = Departamento;
+module.exports = Comodo;
